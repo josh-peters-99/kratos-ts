@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kratos Workout Tracker
 
-## Getting Started
+A modern, serverless full-stack web application for tracking workouts, personal bests, workout plans, and user metrics.
 
-First, run the development server:
+## 🧰 Built with:
+- **Frontend:** Next.js (App Router)
+- **Backend:** Next.js API routes for simple logic, AWS Lambda via API Gateway for complex operations
+- **Database:** DynamoDB
+- **Caching:** Upstach Redis
+- **File Storage:** S3
+- **Authentication:** Auth.js with JWT
+- **Hosting:** Vercel (frontend + API) + AWS Lambda (heavy backend)
+- **CI/CD:** GitHub Actions
+- **Testing:** Jest
+- **UI/UX:** TailwindCSS + Daisy UI
 
+## 🚀 Features
+- User authentication (Sign up / Sign in with email)
+- Create and track workouts
+- Save reusable exercises
+- Track personal history for each exercise
+- Dynamic workout form (supports cardio, weightlifting, bodyweight, and timed exercises)
+- Responsive and mobile-friendly design
+
+## 🗺️ API Routes
+| Method | Endpoint | Description
+| --- | --- | --- |
+| `POST` | `/api/auth/signup`            | Create a new user account                |
+| `GET`  | `/api/workouts`               | Fetch all workout for the signed-in user |
+| `POST` | `/api/workouts`               | Create a new workout                     |
+| `GET`  | `/api/exercises`              | Fetch an exercise                        |
+| `POST` | `/api/exercises`              | Create a new exercise                    |
+| `GET`  | `/api/exercises/search-names` | Searches exercises during search         |
+| `PUT`  | `/api/user/[id]`              | Edit the user profile data               |
+| `GET`  | `/api/userMetrics`            | Fetch a user's metrics                   |
+
+## 🔒 Authentication
+- Sessions are managed using **Auth JWT tokens.**
+- Protected API routes require authentication to access user data.
+
+## 📦 Setup Instructions
+1. Clone the repository
+```bash
+git clone https://github.com/josh-peters-99/kratos-ts.git
+cd kratos-ts
+```
+2. Install dependencies
+```bash
+npm install
+```
+3. Set up environment variables
+  - Create a `.env.local` file in the root directory with the following:
+```bash
+MONGODB_URI=your_mongodb_connection_string
+NEXTAUTH_SECRET=your_nextauth_secret
+NEXTAUTH_URL=http://localhost:3000
+```
+4. Run the app locally
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+5. Visit [http://localhost:3000](http://localhost:3000) to view the app.
+
+## 🧪 Testing
+Run unit tests:
+```bash
+npm run test
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📚 Future Improvements
+- Advanced workout analytics and graphs
+- Save reusable workout templates
+- Plan structured weekly workouts
+- Track total workouts (weekly, mongthly, yearly, all-time)
+- Social fetaures
+- Workout history calendar view
+- Notifications/reminders for planned workouts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ☁️ Live Application Deployed on Vercel
+🚧 Under Construction
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+This project is licensed under the MIT license.
