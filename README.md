@@ -19,7 +19,6 @@ A modern, serverless full-stack web application for tracking workouts, personal 
 - Create and track workouts
 - Save reusable exercises
 - Track personal history for each exercise
-- Dynamic workout form (supports cardio, weightlifting, bodyweight, and timed exercises)
 - Responsive and mobile-friendly design
 
 ## 🗺️ API Routes
@@ -51,7 +50,6 @@ npm install
 3. Set up environment variables
   - Create a `.env.local` file in the root directory with the following:
 ```bash
-MONGODB_URI=your_mongodb_connection_string
 NEXTAUTH_SECRET=your_nextauth_secret
 NEXTAUTH_URL=http://localhost:3000
 ```
@@ -62,10 +60,7 @@ npm run dev
 5. Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
 ## 🧪 Testing
-Run unit tests:
-```bash
-npm run test
-```
+🚧 Under Construction
 
 ## 📚 Future Improvements
 - Advanced workout analytics and graphs
@@ -76,7 +71,7 @@ npm run test
 - Workout history calendar view
 - Notifications/reminders for planned workouts
 
-## ☁️ Live Application Deployed on Vercel
+## ☁️ Live Application
 🚧 Under Construction
 
 ## 📄 License
