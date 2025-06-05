@@ -1,4 +1,4 @@
-# Kratos Workout Tracker
+# Lift Ledger Workout Tracker
 
 A modern, serverless full-stack web application for tracking workouts, personal bests, workout plans, and user metrics.
 
