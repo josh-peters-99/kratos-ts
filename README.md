@@ -40,7 +40,7 @@ A modern, serverless full-stack web application for tracking workouts, personal 
 ## 📦 Setup Instructions
 1. Clone the repository
 ```bash
-git clone https://github.com/josh-peters-99/kratos-ts.git
+git clone https://github.com/josh-peters-99/liftledger.git
 cd kratos-ts
 ```
 2. Install dependencies
